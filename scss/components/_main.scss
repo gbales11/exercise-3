@@ -20,6 +20,8 @@ html {
 
 body{
   font-family: sans-serif;
+  background-color: $light-orange;
+  color: $black;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn,
@@ -43,9 +45,15 @@ header {
   @include zero;
   li {
     list-style-type: none;
-    &:first-child 
+    display: block;
+    text-align: center;
+    background-color: $light-orange;
+    position: relative;
+    border-top: 1px $light-orange;
+    
     a{
-      border-top: 1px solid $light-grey;
+      color: $light-orange;
+      text-decoration: none;
     }
     a{
       display: block;
@@ -111,7 +119,9 @@ header {
   }
 }
 
-@media only screen and (min-width: 60em){ 
+
+
+@media only screen and (min-width: 35em){ 
   .toggle-btn,
   .close-btn{
     display: none;
@@ -121,5 +131,17 @@ header {
   body.noscript .slide-menu{
     position: static;
     right: auto;
+  }
+
+  .navigation ul {
+    li{
+      display: inline-block;
+      float: left;
+      list-style-type:  none; 
+      a{
+        background-color: $light-blue;
+      }
+
+    }
   }
   
